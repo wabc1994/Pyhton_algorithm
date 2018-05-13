@@ -1,5 +1,5 @@
-import requests
 import numpy as np
+import requests
 
 """
 linear regression is the most basic type of regression commonly used for predictive analysis
@@ -71,6 +71,7 @@ def run_steep_gradient_descent(data_x, data_y, len_data, alpha, theta):
 
 def sum_of_square_error(data_x, data_y, len_data, theta):
     """
+    this is the cost function
     Return sum of the square error for error calculation
     :param data_x: contains our data_set
     :param data_y: contains the out_put
