@@ -23,7 +23,8 @@ class Graph:
 
 
 
-    #get the node into the stack, when one node all the children are visited
+    # get the node into the stack, when one node all the
+    # children are visited 核心代码快， 最后叠加去，最后一个元素加入stack
     def fillOrder(self,v, visited, stack):
         #marked the current node as visited
         visited[v] = True
