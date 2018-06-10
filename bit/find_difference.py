@@ -16,6 +16,7 @@ explanation:
 A xor B xor C = A xor C xor B
 If A == C, then A xor C = 0
 and then, B xor 0 =  B
+
 """
 def find_difference(s, t):
   ret = 0
@@ -27,7 +28,26 @@ def find_difference(s, t):
 
   return chr(ret)
 
+"""
+java 方法的解决
+public  char class_solution(string a ,string b)
+{
+    char s = 0;
+    for(int i=0;i<a.length();i++)
+    {
+        s = s ^ a.charAt(i);
+    }
+    for(int j=0;j<b.length();j++)
+    {
+        s = s ^ b.length(j);
+    }
+    return s
+}
+"""
+
 if __name__ == '__main__':
+    """  多个数做异或运算，改变顺序是无关的，a ^ a = 0，最终相同的元素 得到的结果是一串0，然后
+      0和0做或与运算，是0 （然后一个数和0做或与运算都是回到本身），然后最终可以得到不一样的那个字母"""
     print(find_difference("abcd","cedba"))
     s = "abcd"
     b = "abdce"
